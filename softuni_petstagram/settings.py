@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'softuni_petstagram.common',
+    'softuni_petstagram.accounts',
+    'softuni_petstagram.pets',
+    'softuni_petstagram.photos',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +58,8 @@ ROOT_URLCONF = 'softuni_petstagram.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates']
+        ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

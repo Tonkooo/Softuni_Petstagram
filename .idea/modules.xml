@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/softuni_petstagram.iml" filepath="$PROJECT_DIR$/.idea/softuni_petstagram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Softuni_Petstagram.iml" filepath="$PROJECT_DIR$/.idea/Softuni_Petstagram.iml" />
     </modules>
   </component>
 </project>
