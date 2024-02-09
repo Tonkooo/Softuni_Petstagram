@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
 
+from softuni_petstagram.accounts.urls import details_profile
+
 urlpatterns = (
     path('admin/', admin.site.urls),
     path('accounts/', include('softuni_petstagram.accounts.urls')),
