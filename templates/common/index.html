@@ -47,13 +47,28 @@
                     </li>
                     <li class="nav-item">
 
+                        <!-- Link to Login Page -->
+                        <a href="#">
+                            <i>Login</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+
+                        <!-- Link to Register Page -->
+                        <a href="">
+                            <i>Register</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+
                         <!-- Link to Profile Page -->
                         <a href="#">
                             <i>Profile</i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <!-- Log out -->
+
+                        <!-- Lpg out -->
                         <a href="#">
                             <i>Log out</i>
                         </a>
@@ -67,51 +82,27 @@
 
 <!-- Starts Main Section -->
 <main>
+    <div class="container">
+        <div class="col-9">
 
-    <div class="pet-profile">
-        <!-- Start Pet Personal Data Section -->
-        <div class="profile">
-            <div class="profile-data">
-                <div class="profile_img">
-                    <div class="image">
-                        <!-- Pet URL Image -->
-                        <img src="https://encrypted-tbn0.gstatic.com/static/images?q=tbn:ANd9GcTgoIHq82qLYnvomfz5ZkW5CLQ8VNxCyI-hUw&usqp=CAU"
-                             alt="img8">
-                    </div>
-                </div>
-                <div class="personal">
-                    <div class="edit">
-                        <!-- Pet Name -->
-                        <p>Sasho</p>
-                        <!-- Pet Edit Button -->
-                        <a href="">
-                            <img class="edit-img" src="{% static 'images/edit-pen-icon-6.jpg" alt="edit button' %}">
-                        </a>
-                        <!-- Pet Delete Button -->
-                        <a href="">
-                            <img class="bin-img" src="{% static 'images/icon-remove-22.jpg' %}" alt="bin button">
-                        </a>
-                    </div>
-                    <div class="data">
-                        <!-- Pet Total Photos -->
-                        <span>4</span>
-                        <p>photos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Pet Personal Data Section -->
+            <!-- Start Searchbar Form -->
+            <form class="searchbar" method="post">
+                <input type="text" placeholder="Search by pet name...">
+                <button>
+                    <img src="{% static 'images/search.png' %}" height="18" alt="img2">
+                </button>
+            </form>
+            <!-- End Searchbar Form -->
 
-        <div class="pet-posts">
-
-            <!-- IF Photos Start Pet Photos Post Section -->
-
+            <!-- Start Pet Photos Post Section -->
             <!-- Start First Pet Photo Post -->
             <div class="card">
+
+                <!-- Start User Details and Image Location -->
                 <div class="top">
-                    <!-- User Details and image location -->
                     <div class="userDetails">
-                        <a href="profile details">
+                        <!-- Link to User Profile Page -->
+                        <a href="#">
                             <div class="profilepic">
                                 <div class="profile_img">
                                     <div class="image">
@@ -121,81 +112,98 @@
                             </div>
                         </a>
                         <h3>
-                            <a href="profile details">
+                            <!-- Link to User Profile Page -->
+                            <a href="#">
                                 <!-- if user has first name and last name -->
                                 Diyan Kalaydzhiev
                                 <!-- else -->
-                                <!-- user username -->
+                                <!-- show user username -->
                             </a>
                             <br>
                             <!-- if the photo has location -->
                             <span>Bansko, Bulgaria</span>
                         </h3>
                     </div>
-                    <!--  -->
                 </div>
-                <!-- Post image -->
+                <!-- End User Details and Image Location -->
+
+                <!-- Start Pet Photo -->
                 <div class="imgBx" id="place the id of the photo here">
                     <img src="{% static 'images/axolotl.jpeg' %}" alt="post" class="cover">
                 </div>
-                <!-- -->
+                <!-- End Pet Photo -->
 
+                <!-- Start Like and Share Buttons -->
                 <div class="bottom">
-                    <!-- like and share buttons -->
                     <div class="actionBtns">
                         <div class="left">
-								<span class="heart">
-                                    <a href="#">
-                                        <!-- if user has liked the photo -->
-                                        <i class="fa-solid fa-heart" style="color: #ed4040;"></i>
-                                        <!-- else -->
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-								</span>
-                            <a href="share">
+                            <!-- Start Like Button -->
+                            <span class="heart">
+                                <a href="#">
+                                    <!-- if user has liked the photo -->
+                                    <i class="fa-solid fa-heart" style="color: #ed4040;"></i>
+                                    <!-- else -->
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </span>
+                            <!-- End Like Button -->
+
+                            <!-- Start Share Button -->
+                            <a href="#">
                                 <i class="fa-solid fa-share"></i>
                             </a>
+                            <!-- End Share Button -->
+
                         </div>
                     </div>
-                    <!-- -->
+                    <!-- End Like and Share Buttons -->
 
+                    <!-- Number of Likes per Photo -->
+                    <p class="likes">203 likes</p>
+
+
+                    <!-- Start Tagged Pets -->
+                    <!-- Link to First Tagged Pet Details Page-->
                     <a href="#">
-                        <p class="likes">203 likes</p>
-                    </a>
-
-                    <!-- tagged pets -->
-                    <a href="pet profile">
                         <p class="message">
                             <b>Sasho</b>
                         </p>
                     </a>
-                    <a href="pet profile">
+
+                    <!-- Link to Second Tagged Pet Details Page-->
+                    <a href="#">
                         <p class="message">
                             <b>Some other fish</b>
                         </p>
                     </a>
-                    <!--  -->
+                    <!-- End Tagged Pets -->
 
-                    <a href="post details">
+                    <!-- Link to Photo Details Page -->
+                    <a href="#">
                         <h4 class="details">See details</h4>
                     </a>
 
+                    <!-- Date of Publication -->
                     <h5 class="postTime">19/09/2022</h5>
 
-                    <!-- add comments section -->
+                    <!-- Start Add Comments Section -->
                     <div class="addComments">
 
-                        <form method="post" action="add comment">
+                        <!-- Start Add Comments Form -->
+                        <form method="post" action="#">
                             <label for="id_body">Body:</label>
                             <textarea name="body" cols="40" rows="10" placeholder="Add comment..." maxlength="300"
                                       required="" id="id_body"></textarea>
                             <button type="submit">Post</button>
                         </form>
+                        <!-- End Add Comments Form -->
+
                     </div>
-                    <!--  -->
+                    <!-- End Add Comments Section -->
+
                 </div>
             </div>
-            <!-- End  First Pet Photo Post -->
+            <!-- End First Pet Photo Post -->
 
             <!-- Start Second Pet Photo Post -->
             <div class="card">
@@ -214,21 +222,20 @@
                         <h3>
                             <a href="profile details">
                                 <!-- if user has first name and last name -->
-                                Diyan Kalaydzhiev
+                                Antonia Hristova
                                 <!-- else -->
                                 <!-- user username -->
                             </a>
                             <br>
                             <!-- if the photo has location -->
-                            <span>Bansko, Bulgaria</span>
+                            <span>Sofia, Bulgaria</span>
                         </h3>
                     </div>
                     <!--  -->
                 </div>
                 <!-- Post image -->
                 <div class="imgBx" id="place the id of the photo here">
-                    <img src="https:///static.scientificamerican.com/sciam/cache/file/766BFBD4-F8A1-4B7D-8416A370010B5A88_source.jpg"
-                         alt="post" class="cover">
+                    <img src="{% static 'images/dog-on-bed.jpg' %}" alt="post" class="cover">
                 </div>
                 <!-- -->
 
@@ -244,7 +251,7 @@
                                         <i class="fa-regular fa-heart"></i>
                                     </a>
 								</span>
-                            <a href="share">
+                            <a href="#">
                                 <i class="fa-solid fa-share"></i>
                             </a>
                         </div>
@@ -252,18 +259,13 @@
                     <!-- -->
 
                     <a href="#">
-                        <p class="likes">203 likes</p>
+                        <p class="likes">152 likes</p>
                     </a>
 
                     <!-- tagged pets -->
                     <a href="pet profile">
                         <p class="message">
-                            <b>Sasho</b>
-                        </p>
-                    </a>
-                    <a href="pet profile">
-                        <p class="message">
-                            <b>Some other fish</b>
+                            <b>Bucky</b>
                         </p>
                     </a>
                     <!--  -->
@@ -272,7 +274,7 @@
                         <h4 class="details">See details</h4>
                     </a>
 
-                    <h5 class="postTime">19/09/2022</h5>
+                    <h5 class="postTime">18/09/2022</h5>
 
                     <!-- add comments section -->
                     <div class="addComments">
@@ -289,10 +291,93 @@
             </div>
             <!-- End Second Pet Photo Post -->
 
-            <!-- IF Photos End Pet Photos Post Section -->
+            <!-- Start Third Pet Photo Post -->
+            <div class="card">
+                <div class="top">
+                    <!-- User Details and image location -->
+                    <div class="userDetails">
+                        <a href="profile details">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src="{% static 'images/person.png' %}" alt="img8">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <h3>
+                            <a href="profile details">
+                                <!-- if user has first name and last name -->
+                                Steven Ivanov
+                                <!-- else -->
+                                <!-- user username -->
+                            </a>
+                            <br>
+                            <!-- if the photo has location -->
+                            <span>Dobrich, Bulgaria</span>
+                        </h3>
+                    </div>
+                    <!--  -->
+                </div>
+                <!-- Post image -->
+                <div class="imgBx" id="place the id of the photo here">
+                    <img src="{% static '/images/dog-on-road.jpg' %}" alt="post" class="cover">
+                </div>
+                <!-- -->
 
-            <!-- IF NOT Photos Show No Post Image -->
-            <img class="no-posts" src="{% static 'images/no_posts.png' %}" alt="no posts image">
+                <div class="bottom">
+                    <!-- like and share buttons -->
+                    <div class="actionBtns">
+                        <div class="left">
+								<span class="heart">
+									<a href="#">
+                                        <!-- if user has liked the photo -->
+                                        <i class="fa-solid fa-heart" style="color: #ed4040;"></i>
+                                        <!-- else -->
+                                        <i class="fa-regular fa-heart"></i>
+                                    </a>
+								</span>
+                            <a href="share">
+                                <i class="fa-solid fa-share"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- -->
+
+                    <a href="#">
+                        <p class="likes">176 likes</p>
+                    </a>
+
+                    <!-- tagged pets -->
+                    <a href="pet profile">
+                        <p class="message">
+                            <b>Donny</b>
+                        </p>
+                    </a>
+                    <!--  -->
+
+                    <a href="post details">
+                        <h4 class="details">See details</h4>
+                    </a>
+
+                    <h5 class="postTime">16/09/2022</h5>
+
+                    <!-- add comments section -->
+                    <div class="addComments">
+
+                        <form method="post" action="add comment">
+                            <label for="id_body">Body:</label>
+                            <textarea name="body" cols="40" rows="10" placeholder="Add comment..." maxlength="300"
+                                      required="" id="id_body"></textarea>
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+            <!-- End Third Pet Photo Post -->
+
+            <!-- End Pet Photos Post Section -->
 
         </div>
     </div>
